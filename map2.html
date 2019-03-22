@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Geolocation</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+            /* Always set the map height explicitly to define the size of the div
+             * element that contains the map. */
+            #map {
+              height: 100%;
+            }
+            /* Optional: Makes the sample page fill the window. */
+            html, body {
+              height: 100%;
+              margin: 0;
+              padding: 0;
+            }
+          </style>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+          <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+          <script>
+            // Initialize Firebase
+            var config = {
+              apiKey: "AIzaSyA86N6Jz-ytx1klKe2e9yhmnENw_4Lubfw",
+              authDomain: "tatacrucible-b11a9.firebaseapp.com",
+              databaseURL: "https://tatacrucible-b11a9.firebaseio.com",
+              projectId: "tatacrucible-b11a9",
+              storageBucket: "tatacrucible-b11a9.appspot.com",
+              messagingSenderId: "8533288958"
+            };
+            firebase.initializeApp(config);
+          </script>
+            </head>
+            <body>
+                    <div id='map' style='width: 90%; height: 90%;'></div>
+                    <script>
+                            mapboxgl.accessToken = 'pk.eyJ1IjoibXNhdHVsMTMwNSIsImEiOiJjanRpa211a2UxOG1uNDNycnJta3F1dms3In0.HONoCUtAef4bxRreP4PNCA';
+                            var map = new mapboxgl.Map({
+                            container: 'map',
+                            style: 'mapbox://styles/mapbox/streets-v11'
+                            });
+                            </script>
+
+            </body>
+            <script>
+                var marker = new mapboxgl.Marker()
+                .setLngLat([72.897628,19.0730898])
+                .addTo(map);
+                options.color('#FFFFFF')
+            </script>
+        </html>
